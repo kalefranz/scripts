@@ -163,7 +163,7 @@ declare -a casks=(
     "omnidisksweeper"
     "caskroom/homebrew-versions/java6"
     "pycharm"
-    "alfred"
+    "quicksilver"
     "sizeup"
     "slack"
     "sourcetree"

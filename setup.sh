@@ -93,6 +93,14 @@ declare -a arr=(
     "git"
     "libyaml"
     "caskroom/cask/brew-cask"
+    "ack"
+    "gawk"
+    "node"
+    "packer"
+    "pypy"
+    "python3"
+    "xz"
+    "zsh"
     )
 
 for i in "${arr[@]}"; do
@@ -102,7 +110,7 @@ done
 
 # python environment
 if ! $(brew list | grep -q "python$"); then
-    brew install python
+    brew install python --universal
     /usr/local/bin/pip install --upgrade setuptools
     /usr/local/bin/pip install --upgrade pip
 fi

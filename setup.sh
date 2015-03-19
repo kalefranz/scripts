@@ -161,6 +161,7 @@ declare -a casks=(
     "keyboard-maestro"
     "notational-velocity"
     "omnidisksweeper"
+    "caskroom/homebrew-versions/java6"
     "pycharm"
     "alfred"
     "sizeup"

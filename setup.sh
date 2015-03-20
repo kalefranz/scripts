@@ -113,6 +113,7 @@ if ! $(brew list | grep -q "python$"); then
     brew install python --universal
     /usr/local/bin/pip install --upgrade setuptools
     /usr/local/bin/pip install --upgrade pip
+    /usr/local/bin/pip install python-dateutil
 fi
 echo "${prompt_green}✓ brewed python is installed ${prompt_reset}"
 
@@ -123,12 +124,7 @@ if ! test -d /usr/share/ansible; then
 fi
 # install latest version of ansible
 if ! $(which ansible > /dev/null); then
-    if $(brew list | grep -q "python$"); then
-        # if brewed python, use brewed pip
-        /usr/local/bin/pip install --upgrade ansible
-    else
-        sudo pip install --upgrade ansible
-    fi
+    /usr/local/bin/pip install --upgrade ansible
 fi
 echo "${prompt_green}✓ ansible is installed${prompt_reset}"
 

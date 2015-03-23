@@ -11,10 +11,6 @@ brew_cask_install() {
 
 
 declare -a casks=(
-    "vmware-fusion"
-    "vagrant"
-
-
     "iterm2"
     "little-snitch"
     "google-drive"

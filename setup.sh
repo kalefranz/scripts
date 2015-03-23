@@ -139,35 +139,6 @@ brew_cask_install() {
 }
 
 declare -a casks=(
-    "iterm2"
-    "little-snitch"
-    "google-drive"
-    "dropbox"
-    "airfoil"
-    "caffeine"
-    "flux"
-    "istat-menus"
-    "crashplan"
-    "dash"
-    "evernote"
-    "lastpass"
-    "firefox"
-    "hipchat"
-    "karabiner"
-    "keyboard-maestro"
-    "notational-velocity"
-    "omnidisksweeper"
-    "caskroom/homebrew-versions/java6"
-    "pycharm"
-    "quicksilver"
-    "sizeup"
-    "slack"
-    "sourcetree"
-    "sqlitebrowser"
-    "the-unarchiver"
-    "hyperdock"
-    "osxfuse"
-    "google-chrome"
     "vmware-fusion"
     "vagrant"
     )
@@ -176,12 +147,7 @@ for i in "${casks[@]}"; do
     brew_cask_install "$i"
 done
 
-# sublime
-# junos pulse
-# pixelmator
-# skiptunes
-# tunespan
-# veracrypt
+
 
 
 

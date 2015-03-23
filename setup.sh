@@ -149,15 +149,10 @@ done
 
 
 
-
-
-# if ! test -f $HOME/.vagrant.d/license-vagrant-vmware-fusion.lic; then
-#     if ! test -f $HOME/Downloads/vagrant.lic; then
-#         curl -o $HOME/Downloads/vagrant.lic http://repo/dev/vagrant/vagrant.lic
-#     fi
-#     vagrant plugin license vagrant-vmware-fusion $HOME/Downloads/vagrant.lic
-# fi
-# echo "${prompt_green}✓ vagrant-vmware-fusion is installed and licensed${prompt_reset}"
+if ! $(vagrant plugin list | grep -q "vagrant-vmware-fusion"); then
+    vagrant plugin install vagrant-vmware-fusion
+fi
+echo "${prompt_green}✓ vagrant-vmware-fusion is installed and licensed${prompt_reset}"
 
 if ! $(vagrant plugin list | grep -q "vagrant-hostsupdater"); then
     vagrant plugin install vagrant-hostsupdater

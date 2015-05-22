@@ -90,6 +90,7 @@ declare -a arr=(
     "ruby-build"
     "rbenv-gem-rehash"
     "wget"
+    "ansible"
     "git"
     "libyaml"
     "caskroom/cask/brew-cask"
@@ -101,7 +102,7 @@ declare -a arr=(
     "python3"
     "xz"
     "zsh"
-    )
+)
 
 for i in "${arr[@]}"; do
     brew_install "$i"
@@ -116,18 +117,6 @@ if ! $(brew list | grep -q "python$"); then
     /usr/local/bin/pip install python-dateutil
 fi
 echo "${prompt_green}✓ brewed python is installed ${prompt_reset}"
-
-# install ansible
-if ! test -d /usr/share/ansible; then
-    sudo mkdir /usr/share/ansible
-    sudo chown $USER:admin /usr/share/ansible
-fi
-# install latest version of ansible
-if ! $(which ansible > /dev/null); then
-    /usr/local/bin/pip install --upgrade ansible
-fi
-echo "${prompt_green}✓ ansible is installed${prompt_reset}"
-
 
 
 brew_cask_install() {

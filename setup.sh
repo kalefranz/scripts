@@ -50,6 +50,7 @@ fi
 echo "${prompt_white}Updating homebrew.${prompt_reset}"
 brew update
 brew doctor
+brew upgrade --all
 
 # install ruby environment
 if ! $(brew list | grep -q "rbenv$"); then

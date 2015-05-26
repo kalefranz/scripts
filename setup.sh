@@ -97,17 +97,8 @@ declare -a arr=(
     "caskroom/cask/brew-cask"
     "ack"
     "gawk"
-    "node"
-    "packer"
-    "pypy"
-    "python3"
     "xz"
-    "zsh"
 )
-
-for i in "${arr[@]}"; do
-    brew_install "$i"
-done
 
 
 # python environment

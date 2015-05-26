@@ -1,6 +1,28 @@
 #!/bin/bash -eu
 
 
+brew_install() {
+    local package=$1
+    if ! $(brew list | grep -q "$package"); then
+        brew install "$package"
+    fi
+    echo "${prompt_green}✓ $package is installed ${prompt_reset}"
+}
+
+declare -a arr=(
+    "node"
+    "packer"
+    "pypy"
+    "python3"
+    "zsh"
+)
+
+for i in "${arr[@]}"; do
+    brew_install "$i"
+done
+
+
+
 brew_cask_install() {
     local package=$1
     if ! $(brew cask list | grep -q "$package" > /dev/null); then

@@ -100,6 +100,10 @@ declare -a arr=(
     "xz"
 )
 
+for i in "${arr[@]}"; do
+    brew_install "$i"
+done
+
 
 # python environment
 if ! $(brew list | grep -q "python$"); then

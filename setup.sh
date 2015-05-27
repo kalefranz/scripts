@@ -75,6 +75,9 @@ source $HOME/.bash_profile
 if ! $(brew tap | grep -q binary); then
     brew tap homebrew/binary
 fi
+if ! $(brew tap | grep -q dupes); then
+    brew tap homebrew/dupes
+fi
 
 brew_install() {
     local package=$1

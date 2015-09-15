@@ -124,7 +124,7 @@ brew_cask_install() {
 }
 
 declare -a casks=(
-    "vmware-fusion"
+    "vmware-fusion7"
     "vagrant"
     )
 

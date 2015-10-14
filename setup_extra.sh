@@ -62,6 +62,11 @@ declare -a casks=(
     "hyperdock"
     "osxfuse"
     "google-chrome"
+    "pineapple-pro"
+    "soundcleod"
+    "sublime-text3"
+    "virtualbox"
+    "amazon-cloud-drive"
     )
 
 
@@ -69,7 +74,6 @@ for i in "${casks[@]}"; do
     brew_cask_install "$i"
 done
 
-# sublime
 # junos pulse
 # pixelmator
 # skiptunes

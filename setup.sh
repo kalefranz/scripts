@@ -88,15 +88,15 @@ brew_install() {
 }
 
 declare -a arr=(
-    "ruby-build"
-    "rbenv-gem-rehash"
-    "wget"
+    "ack"
     "ansible"
+    "caskroom/cask/brew-cask"
+    "gawk"
     "git"
     "libyaml"
-    "caskroom/cask/brew-cask"
-    "ack"
-    "gawk"
+    "rbenv-gem-rehash"
+    "ruby-build"
+    "wget"
     "xz"
 )
 
@@ -124,7 +124,7 @@ brew_cask_install() {
 }
 
 declare -a casks=(
-    "vmware-fusion7"
+    "vmware-fusion"
     "vagrant"
     )
 

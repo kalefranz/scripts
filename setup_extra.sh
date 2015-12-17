@@ -18,8 +18,8 @@ declare -a arr=(
     "packer"
     "pypy"
     "python3"
-    "zsh"
 )
+# "zsh"
 
 for i in "${arr[@]}"; do
     brew_install "$i"

@@ -58,24 +58,27 @@ declare -a casks=(
     "notational-velocity"
     "omnidisksweeper"
     "osxfuse"
-    "pineapple-pro"
     "pycharm"
     "quicksilver"
     "sizeup"
     "slack"
     "soundcleod"
-    "sourcetree"
     "sqlitebrowser"
-    "sublime-text3"
     "the-unarchiver"
     "virtualbox"
     "xquartz"
     )
 
+#    "pineapple-pro"  # doesn't exist
+#     "sourcetree"  # cask installs files under /usr/local, so maybe do it manually?
+#    "sublime-text3"  # doesn't exist anymore
 
 for i in "${casks[@]}"; do
     brew_cask_install "$i"
 done
+
+open '/opt/homebrew-cask/Caskroom/little-snitch/3.6.1/Little Snitch Installer.app'
+open '/opt/homebrew-cask/Caskroom/lastpass/latest/LastPass Installer.app'
 
 # junos pulse
 # pixelmator
